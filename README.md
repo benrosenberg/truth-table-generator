@@ -1,36 +1,62 @@
 # truth-table-generator
 Truth table generator written in Python. Uses Shunting-Yard algorithm to parse logical expressions with `AND`, `OR`, `NOT`, and `IMPLIES` operators, and parentheses.
 
-Run in terminal with `python table_generator.py`:
+## Usage
+
+Arguments: `latex`, `short`. 
+ - `latex`: specifies whether or not to print as LaTeX source
+ - `short`: specifies whether or not to, when printing LaTeX source, use T/F instead of True/False
+
+### Example: no arguments
 
 ```
 $ python table_generator.py
-Enter variable names separated by spaces: P Q R S
-Enter a logical expression of your variables: ( P AND Q OR R ) IMPLIES ( NOT P OR Q IMPLIES R OR Q ) AND S
-Enter another expression or hit <Return> to proceed: P AND Q
-Enter another expression or hit <Return> to proceed: 
-\begin{array}{c|c|c|c|c|c}
- P & Q & R & S & ( P \land Q \lor R ) \implies ( \neg P \lor Q \implies R \lor Q ) \land S & P \land Q\\
+Enter variable names separated by spaces: P Q
+Enter a logical expression of your variables: P AND Q
+Enter another expression or hit <Return> to proceed:
+        P       Q       P AND Q
+        True    True    True
+        True    False   False
+        False   True    False
+        False   False   False
+```
+
+### Example: `latex` argument
+
+```
+$ python table_generator.py latex
+Enter variable names separated by spaces: P Q
+Enter a logical expression of your variables: P AND Q
+Enter another expression or hit <Return> to proceed:
+\begin{array}{c|c|c}
+ P & Q & P \land Q\\
  \hline
- True & True & True & True & True & True\\
- True & True & True & False & False & True\\
- True & True & False & True & True & True\\
- True & True & False & False & False & True\\
- True & False & True & True & True & False\\
- True & False & True & False & False & False\\
- True & False & False & True & True & False\\
- True & False & False & False & True & False\\
- False & True & True & True & True & False\\
- False & True & True & False & False & False\\
- False & True & False & True & True & False\\
- False & True & False & False & True & False\\
- False & False & True & True & True & False\\
- False & False & True & False & False & False\\
- False & False & False & True & True & False\\
- False & False & False & False & True & False\\
+ \text{True} & \text{True} & \text{True}\\
+ \text{True} & \text{False} & \text{False}\\
+ \text{False} & \text{True} & \text{False}\\
+ \text{False} & \text{False} & \text{False}\\
 \end{array}
 ```
 
-This renders, from LaTeX source, the following:
+LaTeX render:
+![](latex_render_1.png)
 
-![](truth_table_latex_render_fullname.png)
+### Example: `latex` and `short` arguments:
+
+```
+$ python table_generator.py latex short
+Enter variable names separated by spaces: P Q
+Enter a logical expression of your variables: P AND Q
+Enter another expression or hit <Return> to proceed:
+\begin{array}{c|c|c}
+ P & Q & P \land Q\\
+ \hline
+ \text{T} & \text{T} & \text{T}\\
+ \text{T} & \text{F} & \text{F}\\
+ \text{F} & \text{T} & \text{F}\\
+ \text{F} & \text{F} & \text{F}\\
+\end{array}
+```
+
+LaTeX render:
+![](latex_render_2.png)
