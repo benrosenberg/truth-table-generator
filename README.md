@@ -9,7 +9,7 @@ Arguments: `latex`, `short`.
 
 ## Examples
 
-### Example: no arguments
+### no arguments
 
 ```
 $ python table_generator.py
@@ -23,7 +23,7 @@ Enter another expression or hit <Return> to proceed:
         False   False   False
 ```
 
-### Example: `latex` argument
+### `latex` argument
 
 ```
 $ python table_generator.py latex
@@ -44,7 +44,7 @@ LaTeX render:
 
 ![](latex_render_1.png)
 
-### Example: `latex` and `short` arguments:
+### `latex` and `short` arguments:
 
 ```
 $ python table_generator.py latex short
