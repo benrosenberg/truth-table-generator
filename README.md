@@ -39,6 +39,7 @@ Enter another expression or hit <Return> to proceed:
 ```
 
 LaTeX render:
+
 ![](latex_render_1.png)
 
 ### Example: `latex` and `short` arguments:
@@ -59,4 +60,5 @@ Enter another expression or hit <Return> to proceed:
 ```
 
 LaTeX render:
+
 ![](latex_render_2.png)
