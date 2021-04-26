@@ -1,5 +1,5 @@
 # truth-table-generator
-Truth table generator written in Python. 
+Truth table generator written in Python. Uses Shunting-Yard algorithm to parse logical expressions with `AND`, `OR`, `NOT`, and `IMPLIES` operators, and parentheses.
 
 Run in terminal with `python table_generator.py`:
 
