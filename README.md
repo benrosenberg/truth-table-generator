@@ -7,6 +7,8 @@ Arguments: `latex`, `short`.
  - `latex`: specifies whether or not to print as LaTeX source
  - `short`: specifies whether or not to, when printing LaTeX source, use T/F instead of True/False
 
+## Examples
+
 ### Example: no arguments
 
 ```
@@ -114,6 +116,6 @@ LaTeX render:
 
 ![](latex_render_3.png)
 
-#### Troubleshooting
+## Troubleshooting
 
 Make sure you add the two dollar signs (`$$`) or otherwise specify that the array environment is contained in an equation in order to render it correctly.
