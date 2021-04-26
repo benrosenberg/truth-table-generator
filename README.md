@@ -42,7 +42,7 @@ Enter another expression or hit <Return> to proceed:
 
 LaTeX render:
 
-![](latex_render_1.png)
+![](images/latex_render_1.png)
 
 ### `latex` and `short` arguments:
 
@@ -63,7 +63,7 @@ Enter another expression or hit <Return> to proceed:
 
 LaTeX render:
 
-![](latex_render_2.png)
+![](images/latex_render_2.png)
 
 ### More complex example
 
@@ -114,7 +114,7 @@ Enter another expression or hit <Return> to proceed:
 
 LaTeX render:
 
-![](latex_render_3.png)
+![](images/latex_render_3.png)
 
 ## Troubleshooting
 
