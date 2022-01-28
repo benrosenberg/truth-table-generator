@@ -16,6 +16,7 @@ def latexify(table_string, full_boolean = True):
     top_line = top_line.replace('AND', r'\land').replace('OR', r'\lor')
     top_line = top_line.replace('IMPLIES', r'\implies')
     top_line = top_line.replace('NOT', r'\neg') 
+    top_line = top_line.replace('EQUALS', r'\iff') 
     header += top_line + r' \hline' + '\n'
     footer = r'\end{array}'
 
